@@ -1,5 +1,5 @@
 1 def test_add_new_book_name_length(self, book_name) - проверяем валидные длины названия книги c параметризацией
-2 def test_get_book_name_genre_book(self) - проверяем установленный жанр книги
+2 def test_set_book_name_genre_book(self) - проверяем установленный жанр книги
 3 def test_get_book_name_genre_book(self) - проверяем получение жанра книги по её имени
 4 def test_get_books_with_specific_genre_name_specific_genre(self) - проверяем  выведение списка книг определённого жанра
 5 def test_get_books_genre_books_genre(self) - проверяем получение словаря books_genre
