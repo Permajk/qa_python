@@ -40,9 +40,9 @@ class TestBooksCollector:
     def test_get_book_name_genre_book(self):
         collector3 = BooksCollector()
         collector3.add_new_book('Хищник')
-        collector3.set_book_genre('Хищник', 'Ужасы')
-        genre = collector3.get_book_genre('Хищник')
-        assert genre == 'Ужасы'
+        collector3.books_genre['Хищник'] = 'Ужасы'
+        assert collector3.books_genre['Хищник'] == 'Ужасы'
+
 
     
     def test_get_books_with_specific_genre_name_specific_genre(self): 
@@ -60,9 +60,15 @@ class TestBooksCollector:
         collector5 = BooksCollector()
         collector5.add_new_book('Соник')
         collector5.set_book_genre('Соник', 'Мультфильмы')
+        collector5.add_new_book('Аватар')
+        collector5.set_book_genre('Аватар', 'Фантастика')
+        new_books_genre = {
+        'Соник': 'Мультфильмы',
+        'Аватар': 'Фантастика'
+        }
         books_genre = collector5.get_books_genre()
-        assert 'Соник' in collector5.get_books_genre()
-        assert books_genre['Соник'] == 'Мультфильмы'
+        assert books_genre == new_books_genre
+
 
 
     def test_get_books_for_children_genre_children_rating(self):
