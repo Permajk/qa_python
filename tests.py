@@ -52,6 +52,8 @@ class TestBooksCollector:
         collector4.set_book_genre('Агата Кристи', 'Детективы')
         collector4.add_new_book('Шерлок Холмс')
         collector4.set_book_genre('Шерлок Холмс', 'Детективы')
+        collector4.add_new_book('Звёздные войны')
+        collector4.set_book_genre('Звёздные войны', 'Фантастика')
         assert collector4.get_books_with_specific_genre('Детективы') == ['Агата Кристи', 'Шерлок Холмс']
 
 
@@ -59,7 +61,9 @@ class TestBooksCollector:
         collector5 = BooksCollector()
         collector5.add_new_book('Соник')
         collector5.set_book_genre('Соник', 'Мультфильмы')
+        books_genre = collector5.get_books_genre()
         assert 'Соник' in collector5.get_books_genre()
+        assert books_genre['Соник'] == 'Мультфильмы'
 
 
     def test_get_books_for_children_genre_children_rating(self):
