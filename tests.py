@@ -41,7 +41,7 @@ class TestBooksCollector:
         collector3 = BooksCollector()
         collector3.add_new_book('Хищник')
         collector3.books_genre['Хищник'] = 'Ужасы'
-        assert collector3.books_genre['Хищник'] == 'Ужасы'
+        assert collector3.get_book_genre('Хищник') == 'Ужасы'
 
 
     
