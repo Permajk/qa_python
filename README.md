@@ -12,3 +12,11 @@
 - 7 def test_add_book_in_favorites_add_in_favorite(self) - проверяем добавление книги в избранное
 - 8 def test_delete_book_from_favorites_delete_from_favorite(self) - проверяем удаление книги из избранного
 - 9 def test_get_list_of_favorites_books_favorites(self) - провевяем получение списка избранных книг
+
+## Команда для запуска тестов
+pytest -v tests.py
+
+## Команда для оценки покрытия
+pytest --cov
+
+## Результат выполнения тестов: 100%
